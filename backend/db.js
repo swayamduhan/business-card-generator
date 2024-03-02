@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://admin:Jc6sD0hiR6morjrU@cluster0.aioqxmc.mongodb.net/cards")
+mongoose.connect(process.env.MONGOOSE_URL)
 
 const cardSchema = mongoose.Schema({
     name : String,
