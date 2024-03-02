@@ -1,6 +1,7 @@
 import { useState } from "react"
+import axios from "axios"
 
-export function CreateCard({ cards, setCards }){
+export function CreateCard({ cards, setCards, setButtonCount }){
 
     const [name, setName] = useState("")
     const [desc, setDesc] = useState("")
@@ -38,7 +39,17 @@ export function CreateCard({ cards, setCards }){
                 setLinkedin(value)
             }}></input>
             <button onClick={function (){
-                setCards([...cards, cardObj])
+                axios.post('https://business-card-generator.onrender.com/card', {
+                    name : name,
+                    description : desc,
+                    interests : interest,
+                    linkedin : linkedin,
+                    twitter : twitter
+                })
+                .then(function (response) {
+                    console.log(response);
+                    setButtonCount((count)=>count+1)
+                })
             }}>Create Card</button>
         </div>
     )
