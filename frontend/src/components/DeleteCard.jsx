@@ -5,7 +5,7 @@ export function DeleteCard({ cards, setCards, setButtonCount }){
     const [name, setName] = useState("")
     return (
         <div>
-            <input id="delete-name" type="text" placeholder="enter name" onChange={(e)=>{
+            <input id="delete-name" type="text" placeholder="enter name to delete" onChange={(e)=>{
                 const value = e.target.value
                 setName(value)
             }}></input>
