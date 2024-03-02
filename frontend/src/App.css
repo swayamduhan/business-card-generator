@@ -1,0 +1,62 @@
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.outer-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db; /* Blue border on focus */
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3498db; /* Blue */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker Blue */
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #1f618d; /* Even Darker Blue */
+  transform: translateY(1px);
+}
+
+.link {
+  inherits: button;
+  float: right;
+  margin: 10px;
+  font-size: 14px;
+}
